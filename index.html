@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.0.6/wordcloud2.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/avatar.jpg" alt="个人头像" class="avatar">
+        <button id="music-toggle" class="music-button">🎵</button>
+        <input type="range" id="volume-control" class="volume-slider" min="0" max="1" step="0.01" value="0.5">
+        <h1 class="title">欢迎来到礼予昕的主页！</h1>
+    </header>
+    <audio id="background-music" loop>
+        <source src="music/1.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+    <main>
+        <section class="basic-info">
+            <div class="info-grid">
+                <div>姓名｜礼予昕</div>
+                <div>手机｜17704467001</div>
+                <div>性别｜男</div>
+                <div>邮箱｜977223039@qq.com</div>
+                <div>出生｜1999.11.20</div>
+                <div>户籍｜甘肃省兰州市</div>
+                <div>居住｜甘肃省兰州市</div>
+                <div>学校｜兰州大学</div>
+                <div>学历｜本科</div>
+                <div>专业｜计算机应用</div>
+            </div>
+        </section>
+        <section class="chat-interface">
+            <h2>昕的小助手</h2>
+            <div class="chat-box" id="chat-box">
+                <div class="chat-header">昕 ❤️❤️❤️ 昕</div>
+                <!-- 聊天记录将显示在这里 -->
+            </div>
+            <input type="text" id="user-input" placeholder="输入消息..." />
+            <button onclick="sendMessage()">发送</button>
+        </section>
+        <section class="carousel">
+            <!-- 轮播图 -->
+            <div class="carousel-container">
+                <img src="images/1.jpg" alt="照片1">
+                <img src="images/2.jpg" alt="照片2">
+                <img src="images/3.jpg" alt="照片3">
+                <img src="images/4.jpg" alt="照片4">
+            </div>
+        </section>
+        <section class="wordcloud">
+            <canvas id="wordcloud-canvas" width="600" height="400"></canvas>
+        </section>
+        <section class="video-gallery">
+            <h2 class="video-title">
+                <span class="char1">散</span>
+                <span class="char2">华</span>
+                <span class="char3">礼</span>
+                <span class="char4">弥</span>
+            </h2>
+            <video controls>
+                <source src="videos/1.mp4" type="video/mp4">
+                您的浏览器不支持HTML5视频。
+            </video>
+            <video controls>
+                <source src="videos/2.mp4" type="video/mp4">
+                您的浏览器不支持HTML5视频。
+            </video>
+            <video controls>
+                <source src="videos/3.mp4" type="video/mp4">
+                您的浏览器不支持HTML5视频。
+            </video>
+        </section>
+        <section class="content">
+            <h2>关于我</h2>
+            <p>这里是关于我的介绍。</p>
+            <button class="cta-button">查看更多作品</button>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-icons">
+                <a href="https://www.bilibili.com" class="social-icon">Bilibili</a>
+                <a href="#" class="social-icon">微信</a>
+                <a href="#" class="social-icon">QQ</a>
+            </div>
+            <div class="footer-info">
+                <p>个人名言：追求卓越，成功自来。</p>
+                <p>姓名：礼予昕</p>
+                <p>职称：软件工程师</p>
+                <p>邮箱：977223039@qq.com</p>
+                <p>手机号：17704467001</p>
+                <p>工作地址：甘肃省兰州市</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
